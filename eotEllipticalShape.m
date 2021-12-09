@@ -49,7 +49,7 @@ for step = 1:numSteps
     
     
     % get indexes of promising new objects 
-    [newIndexes,measurements] = getPromisingNewObjects(currentParticlesKinematic,currentParticlesExtent,currentExistences,measurements,parameters);
+    [newIndexes,measurements] = getPromisingNewTargets(currentParticlesKinematic,currentParticlesExtent,currentExistences,measurements,parameters);
     numNew = size(newIndexes,1);
     currentLabels = cat(2,currentLabels,[step*ones(1,numNew);newIndexes']);
     
