@@ -61,7 +61,7 @@ for step = 1:numSteps
     newWeights = zeros(numParticles,numNew);
     for target = 1:numNew
         proposalMean = measurements(:,newIndexes(target));
-        proposalCovariance = 2 * totalCovariance; % strech covariance matrix to make proposal distribution heavier-tailed then target distribution
+        proposalCovariance = 2 * totalCovariance; % strech covariance matrix to make proposal distribution heavier-tailed than target distribution
         
         newParticlesKinematic(1:2,:,target) = proposalMean + sqrtm(proposalCovariance) * randn(2,numParticles);
         newWeights(:,target) = uniformWeight - log(mvnpdf(newParticlesKinematic(1:2,:,target)', proposalMean', proposalCovariance));
