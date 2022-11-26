@@ -31,6 +31,11 @@ parameters.priorExtent2 = 100;
 parameters.priorExtent1 = [[meanTargetDimension 0];[0 meanTargetDimension]]*(parameters.priorExtent2-3);
 parameters.degreeFreedomPrediction = 20000;
 
+% censoring and measurement reordering parameters
+parameters.freeThreshold = 0.9;
+parameters.clusterThreshold = 0.9;
+parameters.minClusterElements = 1;
+
 
 % sampling parameters
 parameters.numParticles = 5000;
