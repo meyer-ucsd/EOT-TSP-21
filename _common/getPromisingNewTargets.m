@@ -1,4 +1,4 @@
-function [ newIndexes, measurements ] = getPromisingNewObjects( currentParticlesKinematicTmp, currentParticlesExtentTmp, currentExistencesTmp, measurements, parameters )
+function [ newIndexes, measurements ] = getPromisingNewTargets( currentParticlesKinematicTmp, currentParticlesExtentTmp, currentExistencesTmp, measurements, parameters )
 numMeasurements = size( measurements, 2 );
 numParticles = size( currentParticlesKinematicTmp, 2 );
 measurementsCovariance = parameters.measurementVariance * eye( 2 );
