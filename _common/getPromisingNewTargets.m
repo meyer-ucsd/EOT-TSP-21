@@ -16,7 +16,6 @@ inputDA = zeros(numTargets,numMeasurements);
 
 for target = 1:numTargets
     lengthIndex = numParticles(target);
-    likelihood1{target} = zeros(lengthIndex,numMeasurements);
     tmpMean = reshape(currentParticlesKinematic(target).particlesKinematic(1:2,:),2,lengthIndex);
     tmpCov = reshape(currentParticlesKinematic(target).particlesExtent,2,2,lengthIndex) + repmat(measurementsCovariance,[1,1,lengthIndex]);
     for measurement = numMeasurements:-1:1
