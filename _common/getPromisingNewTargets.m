@@ -1,4 +1,3 @@
-function [newIndexes,measurements,likelihood1] = getPromisingNewMeasurement(multiBernoulli,measurements,parameters)
 function [newIndexes,measurements] = getPromisingNewTargets(currentParticlesKinematic,currentParticlesExtent,currentExistences,measurements,parameters)
 
 % find ``free'' measurements by updating legacy potential targets only
